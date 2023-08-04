@@ -1,0 +1,91 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add__todo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    & input {
+        width: 200px;
+        height: 34px;
+        outline: none;
+    }
+}
+.todo__main {
+    width: 900px;
+    height: 600px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: scroll;
+
+    & .todo__names {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5px;
+
+        & .todo__names__list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        & .todo__name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 57.4px;
+            border: 1px solid black;
+            padding: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+    & .todo__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 5px;
+
+        & .todo__content__list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        & .content {
+            width: 500px;
+            border: 1px solid black;
+            padding: 5px;
+
+            & .header {
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+            & button {
+                margin-right: 5px;
+            }
+
+            & .active {
+                border: 1px solid yellow;
+                color: yellow;
+            }
+
+            & .done {
+                border: 1px solid green;
+                color: green;
+            }
+        }
+    }
+}
